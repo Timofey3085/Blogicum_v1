@@ -1,10 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block title %}
-{{ post.location }}{{ post.date }}
+  {{ post.location }}{{ post.date }}
 {% endblock %}
-
 {% block content %}
   <article>
     <ul>
@@ -23,6 +21,5 @@
     <p>
       {{ post.text|linebreaksbr }}
     </p>          
-  </article>
-</div>              
+  </article>              
 {% endblock %}

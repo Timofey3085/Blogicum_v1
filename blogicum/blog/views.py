@@ -1,6 +1,6 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
 posts = [
     {
         'id': 0,
@@ -45,19 +45,19 @@ posts = [
 ]
 
 
-def index(request):
+def index(request) -> HttpResponse:
     template = 'blog/index.html'
     context = {'post_list': posts}
     return render(request, template, context)
 
 
-def post_detail(request, id):
+def post_detail(request, id) -> HttpResponse:
     template = 'blog/detail.html'
     context = {'post': posts[id]}
     return render(request, template, context)
 
 
-def category_posts(request, category_slug):
+def category_posts(request, category_slug) -> HttpResponse:
     template = 'blog/category.html'
     context = {'category_slug': category_slug}
     return render(request, template, context)
