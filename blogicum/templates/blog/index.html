@@ -3,8 +3,8 @@
 {% block content %}
   <h1>Лента записей</h1>                        
   <hr>
-{% for post in post_list reversed %}
 <article>
+{% for post in post_list reversed %}
   <ul>
   <li>
     Место: {{ post.location }}              
@@ -22,6 +22,6 @@
   {% if not forloop.last %}
     <hr>
   {% endif %}
-</article>
 {% endfor %}
+</article>
 {% endblock %}
