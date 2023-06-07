@@ -46,18 +46,18 @@ posts = [
 
 
 def index(request) -> HttpResponse:
-    template = 'blog/index.html'
+    template: str = 'blog/index.html'
     context = {'post_list': posts}
     return render(request, template, context)
 
 
 def post_detail(request, id) -> HttpResponse:
-    template = 'blog/detail.html'
+    template: str = 'blog/detail.html'
     context = {'post': posts[id]}
     return render(request, template, context)
 
 
 def category_posts(request, category_slug) -> HttpResponse:
-    template = 'blog/category.html'
+    template: str = 'blog/category.html'
     context = {'category_slug': category_slug}
     return render(request, template, context)
