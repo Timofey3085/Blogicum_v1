@@ -41,3 +41,5 @@ pip install -r requirements.txt
 ```python
 python3 manage.py runserver
 ```
+Автор
+[Timofey - Razborshchikov](https://github.com/Timofey3085)
